@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'jen-doc-agent'
+        }
+    }
     triggers {
         pollSCM '* * * * *'
     }
